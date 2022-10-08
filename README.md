@@ -4,7 +4,7 @@ Deepsort 알고리즘을 활용하여
 [사용자 객체를 USER로 인식하고, 그 외에 잡히는 객체는 NOT_USER로 인식]
 
 #######라즈베리파이#########
-
+``` bash
 import cv2 as cv
 import paho.mqtt.client as mqtt
 import base64
@@ -228,7 +228,7 @@ except:
     #client.disconnect()
 
     print("\nNow you can restart fresh")
-
+```
 
 # Yolov4-tiny-tflite for Person Detection
 This repository is about a person detection using yolov4-tiny-tflite. <br/>
