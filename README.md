@@ -3,6 +3,10 @@ Deepsort 알고리즘을 활용
 데이터를 주고 받아 라즈베리파이 모듈을 제어하며, 실시간 사용자(객체) 인식하고 추적
 [사용자 객체를 USER로 인식하고, 그 외에 잡히는 객체는 NOT_USER로 인식]
 
+MQTT통신을 통해
+사용자 객체를 인식하여
+위치 데이터값을 이용해
+초음파센서, 부저센서, 카메라센서 제어 코드
 #######raspberry#########
 ``` bash
 import cv2 as cv
@@ -41,8 +45,8 @@ IN2 = 13  #35 pin
 IN3 = 6   #31 pin
 IN4 = 5   #29 pin
 
-MQTT_BROKER = "통신IP" ####
-MQTT_SEND = "해당 주소" #### 
+MQTT_BROKER = "통신IP" #### pc - raspberry 맞춰줘야 함.
+MQTT_SEND = "해당 주소" #### pc - raspberry 맞춰줘야 함.
 client = mqtt.Client()
 client.connect(MQTT_BROKER)
 
