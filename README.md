@@ -1,9 +1,9 @@
-Deepsort 알고리즘을 활용하여 
-라즈베리파이와 YOLOv4-Tiny를 활용하여 MQTT 통신을 통해
+Deepsort 알고리즘을 활용
+라즈베리파이와 PyCharm의 YOLOv4-Tiny가 MQTT 통신을 통해
 데이터를 주고 받아 라즈베리파이 모듈을 제어하며, 실시간 사용자(객체) 인식하고 추적
 [사용자 객체를 USER로 인식하고, 그 외에 잡히는 객체는 NOT_USER로 인식]
 
-#######라즈베리파이#########
+#######raspberry#########
 ``` bash
 import cv2 as cv
 import paho.mqtt.client as mqtt
