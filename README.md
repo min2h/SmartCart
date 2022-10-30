@@ -1,3 +1,12 @@
+### Raspberry Pi - PyCharm  [ MQTT 통신 ]
+PC - 사용자 객체 검출 USER/NOT USER Tracking
+![image](https://user-images.githubusercontent.com/91533318/198879249-8054a64e-b635-4a88-b197-f476b12921fd.png) ![image](https://user-images.githubusercontent.com/91533318/198879251-d1446455-f558-4258-8235-a1f5b9988ea9.png)
+
+
+Raspberry - 모듈 제어 module control
+![image](https://user-images.githubusercontent.com/91533318/198879238-a668c095-8d55-4f7d-ace4-afe889bc5042.png)
+
+
 Deepsort 알고리즘을 활용
 라즈베리파이와 PyCharm의 YOLOv4-Tiny가 MQTT 통신을 통해
 데이터를 주고 받아 라즈베리파이 모듈을 제어하며, 실시간 사용자(객체) 인식하고 추적
