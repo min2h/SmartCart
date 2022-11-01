@@ -1,10 +1,10 @@
-### Raspberry Pi - PyCharm  [ MQTT 통신 ]
-# PC - 사용자 객체 검출 USER/NOT USER Tracking
+
+## PC - 사용자 객체 검출 USER/NOT USER Tracking
 ![image](https://user-images.githubusercontent.com/91533318/198879249-8054a64e-b635-4a88-b197-f476b12921fd.png) 
 ![image](https://user-images.githubusercontent.com/91533318/198879251-d1446455-f558-4258-8235-a1f5b9988ea9.png)
 
 
-Raspberry - 모듈 제어 module control
+### Raspberry - 모듈 제어 module control
 ![image](https://user-images.githubusercontent.com/91533318/198879238-a668c095-8d55-4f7d-ace4-afe889bc5042.png)
 
 
@@ -17,6 +17,8 @@ MQTT통신을 통해
 사용자 객체를 인식하여
 위치 데이터값을 이용해
 초음파센서, 부저센서, 카메라센서 제어 코드
+
+### Raspberry Pi - PyCharm  [ MQTT 통신 ]
 #######raspberry#########
 ``` bash
 import cv2 as cv
