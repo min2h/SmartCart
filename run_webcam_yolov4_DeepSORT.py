@@ -260,7 +260,7 @@ def main(_argv):
             ##
 
             if track.track_id == 1:
-                color = colors[int(track.track_id) % len(colors)]  # 박스 색깔 지정해줌
+                color = colors[int(track.track_id) % len(colors)]  # 박스 색깔 지정
                 color = [0]
 
                 MY_User = [str(track.track_id), "USER", int(bbox[0]), int(bbox[1]), int(bbox[2]), int(bbox[3])]
@@ -273,39 +273,26 @@ def main(_argv):
                               -1)
                 cv2.putText(frame, "USER", (int(bbox[0]), int(bbox[1] - 10)), 0, 0.75, (255, 255, 255), 2)
 
-                # print("x=>",int(bbox[0]))
-                # print("y=>", int(bbox[1]))
-                # print("x+w=>", int(bbox[2]))
-                # print("y+h=>", int(bbox[3]))
+                
+                user_w_center = (int(bbox[0]) + int(bbox[2])) // # 박스 x좌표 중앙
 
-                # 화면의 중앙값 -> x좌표 320, y좌표 240
-                # 객체가 왼쪽으로 가면 x좌표 < 320, 오른쪽으로 가면 x좌표 > 320
-                user_w_center = (int(bbox[0]) + int(bbox[2])) // 2  # 박스 x좌표 중앙
-
-                # user_h_center=(int(bbox[1])+int(bbox[3]))//2 #박스 y좌표 중앙
-                # print("중앙 x",user_w_center)
-                # print("중앙 y", user_h_center)
+                # user_h_center=(int(bbox[1])+int(bbox[3]))// # 박스 y좌표 중앙
+                # "중앙 x",user_w_center
+                # "중앙 y", user_h_center
                 if user_w_center >= 0 and user_w_center <= 80:
-                    print("객체가 많이 왼쪽에 있습니다.")
                     client.publish("smart", "left")
 
                 elif user_w_center > 80 and user_w_center <= 240:
-                    print("객체가 조금 왼쪽")
                     client.publish("smart", "m_left")
 
                 elif user_w_center>240 and user_w_center<400:
-                    print("객체가 중앙에 있습니다.")
                     client.publish("smart", "center")
 
                 elif user_w_center>=400 and user_w_center<560:
-                    print("객체가 조금 오른쪽에 있습니다.")
                     client.publish("smart", "m_right")
 
                 else:
-                    print("객체가 많이 오른쪽")
                     client.publish("smart", "right")
-
-                ############################################################
             else:
                 color = colors[int(track.track_id) % len(colors)]
                 color = [200]
