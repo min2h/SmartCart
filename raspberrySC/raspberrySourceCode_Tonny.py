@@ -1,5 +1,3 @@
-#######라즈베리파이#########
-
 import cv2 as cv
 import paho.mqtt.client as mqtt
 import base64
@@ -36,12 +34,8 @@ IN2 = 13  #35 pin
 IN3 = 6   #31 pin
 IN4 = 5   #29 pin
 
-MQTT_BROKER = "192.168.0.5"
-#"172.18.9.12"
-#"172.18.9.12"
-MQTT_SEND = "C:\\Users\\bravo\\PycharmProjects\\TINY\\run_webcam_yolov4_DeepSORT"
-#"C:\\Users\\bravo\\PycharmProjects\\MQTT_P\\server" #min
-#"C:\\Users\\bravo\\PycharmProjects\\TINY\\run_webcam_yolov4_DeepSORT" #seung
+MQTT_BROKER = "통신IP" #### pc - raspberry 맞춰줘야 함.
+MQTT_SEND = "해당 주소" #### pc - raspberry 맞춰줘야 함.
 client = mqtt.Client()
 client.connect(MQTT_BROKER)
 
